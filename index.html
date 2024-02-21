@@ -97,11 +97,21 @@
         width: 100%;
       }
       .intro {
-        width: 60ch;
         max-width: 90%;
-        text-align: center;
         rotate: -1deg;
-        text-wrap: balance;
+        text-align: center;
+        width: 29ch;
+      }
+      @media (min-width: 60rem) {
+        .intro {
+          width: 60ch;
+        }
+      }
+      @supports (text-wrap: balance) {
+        .intro {
+          text-wrap: balance;
+          width: 60ch;
+        }
       }
       .intro span {
         background-color: var(--color-yellow);
